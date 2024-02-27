@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    background-color: $primary-color;
+}
+
+body {
+    max-width: 2700px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h2{
+    @include title-font(clamp(2rem, 3.5vw, 5vw), 900);
+    color: $secondary-color
+}
+
+h3{
+    @include title-font(clamp(2rem, 2vw, 4vw), 600);
+    color: $dark-color
+}

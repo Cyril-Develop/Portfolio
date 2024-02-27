@@ -1,0 +1,40 @@
+// -------- Fonts -------- //
+@mixin title-font($size, $weight) {
+    font-family: 'Fjalla One', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: $size;
+    font-weight: $weight;
+};
+
+@mixin body-font($size) {
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: $size
+};
+
+@mixin font-awesome($unicode, $size, $weight) {
+    content: $unicode;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: $weight;
+    font-size: $size;
+};
+
+// -------- Flex -------- //
+@mixin flex($direction, $justify: null , $align: null, $gap: null) {
+    display: flex;
+    flex-direction: $direction;
+
+    @if $justify {
+        justify-content: $justify;
+    }
+
+    @if $align {
+        align-items: $align;
+    }
+
+    @if $gap {
+        gap: $gap;
+    }
+};

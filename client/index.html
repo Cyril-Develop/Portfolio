@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description"
+        content="Portfolio de Cyril Bourdon, développeur front-end Javascript - React basé à Lille, en France.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CDN FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" sizes="144x144" href="assets/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="150x150" href="assets/favicon/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero_header">
+            <span class="fadeIn_bottom">portfolio _</span>
+            <div class="hero_header_infos fadeIn_bottom">
+                <span>cyril bourdon</span>
+                <span>Lille, France</span>
+            </div>
+            <button aria-label="menu" title="Ouvrir le menu" class="btn_menu fadeIn_bottom">
+                <div class="btn_menu_open" aria-hidden="true">_ Menu</div>
+            </button>
+            <div class="hero_header_menu">
+                <div>
+                    <button aria-label="menu" title="Fermer le menu" class="btn_menu">
+                        <div class="btn_menu_close" aria-hidden="true">Fermer</div>
+                    </button>
+                </div>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_list_item_link">accueil</a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#about" class="nav_list_item_link">à propos</a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#projects" class="nav_list_item_link">projets</a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#contact" class="nav_list_item_link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="hero_main">
+            <h1 class="hero_main_title">
+                <div>
+                    <div>
+                        <span class="letter_fadeIn">d</span>
+                        <span class="letter_fadeIn">é</span>
+                        <span class="letter_fadeIn">v</span>
+                        <span class="letter_fadeIn">e</span>
+                        <span class="letter_fadeIn">l</span>
+                        <span class="letter_fadeIn">o</span>
+                        <span class="letter_fadeIn">p</span>
+                        <span class="letter_fadeIn">p</span>
+                        <span class="letter_fadeIn">e</span>
+                        <span class="letter_fadeIn">u</span>
+                        <span class="letter_fadeIn">r</span>
+                    </div>
+                    <div>
+                        <span class="letter_fadeIn">f</span>
+                        <span class="letter_fadeIn">r</span>
+                        <span class="letter_fadeIn">o</span>
+                        <span class="letter_fadeIn">n</span>
+                        <span class="letter_fadeIn">t</span>
+                        <span class="letter_fadeIn">-</span>
+                        <span class="letter_fadeIn">e</span>
+                        <span class="letter_fadeIn">n</span>
+                        <span class="letter_fadeIn">d</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="letter_fadeIn">j</span>
+                    <span class="letter_fadeIn">a</span>
+                    <span class="letter_fadeIn">v</span>
+                    <span class="letter_fadeIn">a</span>
+                    <span class="letter_fadeIn">s</span>
+                    <span class="letter_fadeIn">c</span>
+                    <span class="letter_fadeIn">r</span>
+                    <span class="letter_fadeIn">i</span>
+                    <span class="letter_fadeIn">p</span>
+                    <span class="letter_fadeIn">t</span>
+                </div>
+                <div>
+                    <div class="line" aria-hidden="true"></div>
+                    <span class="letter_fadeIn">r</span>
+                    <span class="letter_fadeIn">e</span>
+                    <span class="letter_fadeIn">a</span>
+                    <span class="letter_fadeIn">c</span>
+                    <span class="letter_fadeIn">t</span>
+                </div>
+            </h1>
+            <div class="hero_main_img">
+                <img src="assets/images/hero.jpg" alt="portrait - Cyril Bourdon" loading="lazy">
+            </div>
+        </div>
+        <div class="hero_footer">
+            <a href="https://www.youtube.com/channel/UCh1CoeWryzyfRrkoZSJ5_MA" target="_blank" aria-label="Youtube" title="Youtube"
+                class="link">
+                <span class="fa-brands fa-youtube" aria-hidden="true"></span>
+            </a>
+            <a href="https://github.com/Cyril-Develop" target="_blank" aria-label="Visiter le profil GitHub" title="GitHub"
+                class="link">
+                <span class="fa-brands fa-github" aria-hidden="true"></span>
+            </a>
+            <div class="hero_footer_scroll" aria-hidden="true" title="Scroll !">
+                <div class="hero_footer_scroll_anim" aria-hidden="true"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Animation rideau link interne/externe -->
+    <div class="curtain">
+        <span class="curtain_tile"></span>
+        <span class="curtain_tile"></span>
+        <span class="curtain_tile"></span>
+        <span class="curtain_tile"></span>
+        <span class="curtain_tile"></span>
+        <span class="curtain_tile"></span>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main">
+        <section id="about" class="main_about">
+            <div class="main_about_content">
+                <h2 class="main_about_content_title">
+                    <span>à</span> <span>p</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span>
+                </h2>
+                <div class="main_about_content_text">
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Musicien de formation, passionné d'informatique, j'ai décidé de me reconvertir dans le
+                        développement web suite à la crise sanitaire de 2020.
+                    </p>
+                    <p>
+                        D'un naturel curieux, je me suis d'abord formé en autodidacte pendant 6 mois durant lesquels
+                        j'ai appris les languages HTML, CSS et les bases de Javascript en développant des landing page
+                        et des
+                        mini-jeux. <br>
+                        Désirant consolider mes connaissances, j'ai ensuite rejoint deux parcours de
+                        formation diplômant chez OpenClassrooms "Développeur Web" et "Développeur d'application -
+                        Javascript React" qui m'ont permis d'obtenir les titres RNCP de niveau 5 et 6. <br>
+                        Au travers d'une trentaine de projet, j'ai appris à développer des bases de données avec MySQL,
+                        MongoDB, Express.js et Node.js, à concevoir des maquettes avec Figma, à utiliser Git et GitHub
+                        pour versionner des projets, à utiliser des API REST en Javascript et React,... Tout en mettant
+                        l'accent sur les performances, l'accessibilité et le SEO.
+                    </p>
+                    <p> Je suis actuellement à la recherche d'un poste de développeur web junior. </p>
+                </div>
+            </div>
+            <div class="main_about_content_link">
+                <span class="fa-brands fa-html5" title="HTML"></span>
+                <span class="fa-brands fa-css3-alt" title="CSS"></span>
+                <span class="fa-brands fa-sass" title="Sass"></span>
+                <span class="fa-brands fa-js" title="Javascript"></span>
+                <span class="fa-brands fa-react" title="React"></span>
+                <span class="fa-brands fa-node" title="Nodejs"></span>
+            </div>
+        </section>
+
+        <h2 class="main_title">
+            <span>p</span>
+            <span>r</span>
+            <span>o</span>
+            <span>j</span>
+            <span>e</span>
+            <span>t</span>
+            <span>s</span>
+            <div class="title-bg" aria-hidden="true"></div>
+        </h2>
+        <!-- Assure le défilement vers la section projects -->
+        <div id="projects" aria-label="Projets"></div>
+        <section class="main_slider">
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/petits-plats/"
+                    target="_blank" aria-label="Les Petits Plats - Tester le projet" class="link"><span>Tester</span></a>
+                    <video src="assets/videos/lesPetitsPlats.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="main_slider_project_infos">
+                    <h3>Les petits plats</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/petits-plats/" target="_blank" aria-label="Les Petits Plats - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Les petits plats est une application web de recettes de cuisine.
+                        L'intégration de la maquette Figma a été réalisée avec HTML, CSS et Javascript.
+                        Les données sont récupérées depuis une API puis affichées dynamiquement.
+                        Pour ce projet, 3 algorithmes de tri ont été implémentés et une recherche croisée est mise en
+                        place pour filtrer les recettes
+                        en fonction des ingrédients, des ustensiles, des appareils et du nom de la recette.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-html5" title="HTML"></span>
+                        <span class="fa-brands fa-css3-alt" title="CSS"></span>
+                        <span class="fa-brands fa-js" title="Javascript"></span>
+                        <span class="fa-brands fa-sass" title="Sass"></span>
+                        <a href="https://github.com/Cyril-Develop/LesPetitsPlats"
+                        target="_blank" aria-label="Les petits plats - Voir le code source"
+                            title="Les petits plats - Voir le code source" class="link">
+                            <span class="fa-brands fa-github" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/kasa/" target="_blank" aria-label="Kasa - Tester le projet"
+                        class="link"><span>Tester</span></a>
+                    <video src="assets/videos/kasa.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="main_slider_project_infos">
+                    <h3>Kasa</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/kasa/" target="_blank" aria-label="Kasa - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Kasa est une application web de location immobilière.
+                        L'intégration de la maquette Figma a été réalisée avec React et Sass.
+                        L'utilisation de React Router permet de naviguer entre les différentes pages de l'application.
+                        Chaque logement dispose d'une page dédiée contenant ses informations ainsi qu'un slider.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-react" title="React"></span>
+                        <span class="fa-brands fa-sass" title="Sass"></span>
+                        <a href="https://github.com/Cyril-Develop/Kasa" target="_blank" aria-label="Kasa - Voir le code source"
+                            title="Kasa - Voir le code source" class="link">
+                            <span class="fa-brands fa-github " aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/fisheye/" target="_blank" aria-label="Fisheye - Tester le projet"
+                        class="link"><span>Tester</span></a>
+                    <video src="assets/videos/fisheye.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="main_slider_project_infos">
+                    <h3>Fisheye</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/fisheye/" target="_blank" aria-label="Fisheye - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Fisheye est une plateforme de photographes réalisée en HTML, CSS et Javascript.
+                        Les données sont récupérées depuis une API puis affichées dynamiquement.
+                        Chaque photographe dispose d'une page dédiée contenant ses informations, ses réalisations, son
+                        tarif journalier ainsi qu'un formulaire de contact.
+                        Les utilisateurs peuvent liker les médias , les trier par popularité, date ou titre et les
+                        afficher dans une lightbox.
+                        Dans ce projet l'accent a été mis sur l'accessibilité.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-html5" title="HTML"></span>
+                        <span class="fa-brands fa-css3-alt" title="CSS"></span>
+                        <span class="fa-brands fa-js" title="Javascript"></span>
+                        <a href="https://github.com/Cyril-Develop/Fisheye" target="_blank" aria-label="Fisheye - Voir le code source"
+                            title="Fisheye - Voir le code source" class="link">
+                            <span class="fa-brands fa-github " aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/piiquante/"
+                    target="_blank" aria-label="Piiquante - Tester le projet" class="link"><span>Tester</span></a>
+                    <video src="assets/videos/piiquante.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="main_slider_project_infos">
+                    <h3>Piiquante</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/piiquante/" target="_blank" aria-label="Piiquante - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Piiquante est une "galerie" permettant aux utilisateurs de créer un compte, de télécharger leurs sauces piquantes préférées et de liker ou disliker celles que d'autres partagent.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-react" title="React"></span>
+                        <span class="fa-brands fa-sass" title="Sass"></span>
+                        <span class="fa-brands fa-node" title="Nodejs"></span>
+                        <span class="fa-solid fa-database" title="MongoDB"></span>
+                        <a href="https://github.com/Cyril-Develop/Piiquante"
+                        target="_blank" aria-label="Piiquante - Voir le code source"
+                            title="Piiquante - Voir le code source" class="link">
+                            <span class="fa-brands fa-github " aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/kanap/" target="_blank" aria-label="Kanap - Tester le projet"
+                        class="link"><span>Tester</span></a>
+                    <video src="assets/videos/kanap.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="main_slider_project_infos">
+                    <h3>Kanap</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/kanap/" target="_blank" aria-label="Kanap - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Kanap est un site e-commerce réalisé en HTML, CSS et Javascript.
+                        Les données sont récupérées depuis une API puis affichées dynamiquement.
+                        L'utilisateur peut sélectionner un produit, le mettre au panier, modifier la quantité ou le
+                        supprimer.
+                        Le panier est sauvegardé dans le local storage.
+                        Une fois la commande validée, les données sont envoyées au serveur et un numéro de commande est
+                        retourné.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-html5" title="HTML"></span>
+                        <span class="fa-brands fa-css3-alt" title="CSS"></span>
+                        <span class="fa-brands fa-js" title="Javascript"></span>
+                        <a href="https://github.com/Cyril-Develop/Kanap" target="_blank" aria-label="Kanap - Voir le code source"
+                            title="Kanap - Voir le code source" class="link">
+                            <span class="fa-brands fa-github " aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_slider_project">
+                <div class="main_slider_project_media">
+                    <a href="https://cyril-develop.fr/groupomania/" target="_blank" aria-label="Groupomania - Tester le projet"
+                        class="link"><span>Tester</span></a>
+                    <video src="assets/videos/groupomania.mp4" type="video/mp4" muted autoplay loop loading="lazy"></video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="main_slider_project_infos">
+                    <h3>Groupomania</h3>
+                    <a class="link_mobile" href="https://cyril-develop.fr/groupomania/" target="_blank" aria-label="Groupomania - Tester le projet">Tester</a>
+                    <p>
+                        <svg aria-hidden="true" role="img" fill="#263b40" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 80 62.14">
+                            <path
+                                d="m34.8,1.1l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34C1.08,50.31-.41,44.46.1,37.28c.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Zm45.2-.02l-.32,4.55c-6.6,1.9-11.9,5.25-15.9,10.03-4,4.79-6.19,9.9-6.57,15.35-.08,1.18.04,2.05.38,2.64.22.39.49.59.8.62s.79-.16,1.44-.55c2.08-1.28,4.63-1.82,7.67-1.61,3.53.25,6.55,1.9,9.07,4.97,2.52,3.07,3.64,6.58,3.37,10.54s-2.11,7.69-5.45,10.62c-3.34,2.94-7.24,4.25-11.7,3.94-5.2-.36-9.53-2.81-13.01-7.34-3.48-4.53-4.96-10.38-4.46-17.56.58-8.35,3.67-15.66,9.27-21.92,5.6-6.26,14.07-11.01,25.43-14.26Z">
+                            </path>
+                        </svg>
+                        Groupomania est un réseau social intranet.
+                        Après avoir créer un compte, l'utilisateur peut partager des publications, personnaliser sa photo de profil, 
+                        liker et commenter les posts des autres utilisateurs.
+                    </p>
+                    <div class="main_slider_project_infos_technos">
+                        <span class="fa-brands fa-react" title="React"></span>
+                        <span class="fa-brands fa-sass" title="Sass"></span>
+                        <span class="fa-brands fa-node" title="Nodejs"></span>
+                        <span class="fa-solid fa-database" title="MySQL"></span>
+                        <a href="https://github.com/Cyril-Develop/Groupomania" target="_blank" aria-label="Groupomania - Voir le code source"
+                            title="Groupomania - Voir le code source" class="link">
+                            <span class="fa-brands fa-github " aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="main_banner"></div>
+
+        <section id="contact" class="main_contact">
+            <form class="form" novalidate>
+                <div class="form_content">
+                    <div class="form_content_wrapper">
+                        <div>
+                            <label for="lastname">Nom <span>*</span></label>
+                            <input type="text" id="lastname" name="lastname" maxlength="20" required>
+                            <div class="errorField"></div>
+                        </div>
+                        <div>
+                            <label for="firstname">Prénom <span>*</span></label>
+                            <input type="text" id="firstname" name="firstname" maxlength="20" required>
+                            <div class="errorField"></div>
+                        </div>
+                        <div>
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" maxlength="60" required>
+                            <div class="errorField"></div>
+                        </div>
+                    </div>
+                    <div class="form_content_wrapper">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea name="message" id="message" maxlength="400" required></textarea>
+                        <div class="errorField"></div>
+                    </div>
+                </div>
+                <div class="form_send">
+                    <button class="form_send_btn">
+                        Envoyer
+                        <span class="fa-solid fa-paper-plane form_send_btn_icon"></span>
+                        <span class="form_send_btn_loader"></span>
+                    </button>
+                    <p class="form_send_message"></p>   
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer_media">
+            <a href="https://github.com/Cyril-Develop" target="_blank" aria-label="Visiter le profil GitHub" title="GitHub"
+                class="link">
+                <span class="fa-brands fa-github" aria-hidden="true"></span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCh1CoeWryzyfRrkoZSJ5_MA" target="_blank" aria-label="Youtube" title="Youtube"
+                class="link">
+                <span class="fa-brands fa-youtube" aria-hidden="true"></span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <!-- LENIS -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- EMAILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="script/index.js"></script>
+</body>
+
+</html>
