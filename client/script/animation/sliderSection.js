@@ -3,6 +3,7 @@
 /********************************/
 export const animSliderOnX = () => {
     const sections = gsap.utils.toArray(".main_slider_project");
+    const sliderWidth = document.querySelector(".main_slider").offsetWidth;
 
     const sliderTl = gsap
         .timeline({
@@ -12,13 +13,12 @@ export const animSliderOnX = () => {
                 start: "bottom bottom",
                 scrub: 1,
                 pin: true,
-                end: () =>
-                    "+=" + document.querySelector(".main_slider").offsetWidth,
+                end: `+=${sliderWidth}`
             },
         })
         .to(".main_slider", {
             delay: 0.01,
-            xPercent: -83.1
+            x: () => `-${sliderWidth - window.innerWidth}px`,
         });
 
     /*******************************************/
