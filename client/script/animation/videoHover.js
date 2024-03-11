@@ -2,9 +2,9 @@
 /// ------- CURSOR EVENT ------ ///
 /********************************/
 export const showLinkOnHover = () => {
-    const balises = document.querySelectorAll(".main_slider_project_media a");
-    const videos = document.querySelectorAll(".main_slider_project_media video");
-    const inertia = 0.15; // Facteur d'inertie pour le mouvement
+    const balises = document.querySelectorAll(".main_slider_project_media span");
+    const videos = document.querySelectorAll(".main_slider_project_media a");
+    const inertia = 0.1; // Facteur d'inertie pour le mouvement
 
     balises.forEach((balise, index) => {
         let baliseX = 0;
