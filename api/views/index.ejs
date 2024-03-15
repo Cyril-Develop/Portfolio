@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        background-color: #f1f1f1;
+      }
+
+      .line {
+        margin: 0 auto;
+        width: 80%;
+        height: 1px;
+        background-color: #263b40;
+      }
+
+      h1 {
+        background-color: #263b40;
+        padding: 20px 0;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .contact,
+      .message {
+        padding: 20px;
+        font-size: clamp(1.6rem, 3vw, 2rem);
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      width="100%"
+      style="background-color: #f1f1f1"
+    >
+      <tr>
+        <td align="center">
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            width="100%"
+            style="max-width: 800px; margin: 0 auto; background-color: #fff"
+          >
+            <tr>
+              <td align="center" bgcolor="#263b40" style="padding: 20px 0">
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 20px">
+                <div class="contact">
+                  <h2>▶ Coordonnées</h2>
+                  <p>🙍🏻 <%= firstname %> <%= lastname %></p>
+                  <p>📩 <%= email %></p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="line"
+                style="height: 1px; background-color: #263b40"
+              ></td>
+            </tr>
+            <tr>
+              <td style="padding: 20px">
+                <div class="message">
+                  <h2>▶ Message</h2>
+                  <p><%= message %></p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

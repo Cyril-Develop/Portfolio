@@ -1,36 +1,41 @@
 const nodemailer = require('nodemailer');
+const ejs = require('ejs');
+const path = require('path');
 
-//Send email
 const transporter = nodemailer.createTransport({
-	host: "smtp-mail.outlook.com",
-	secureConnection: false,
-	port: 587,
-	tls: {
-		ciphers: 'SSLv3',
-		rejectUnauthorized: false
-	},
-	auth: {
-		user: process.env.EMAIL,
-		pass: process.env.PASSWORD_EMAIL
-	}
+    host: "smtp-mail.outlook.com",
+    secureConnection: false,
+    port: 587,
+    tls: {
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false
+    },
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD_EMAIL
+    }
 });
 
-exports.sendEmail = (req, res) => {
-    const mailOptions = {
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        subject: 'Portfolio - Nouveau message de ' + req.body.firstname + ' ' + req.body.lastname,
-        html: `
-        <p>De : ${req.body.firstname} ${req.body.lastname}</p>
-        <p>Email : ${req.body.email}</p>
-		<p>${req.body.message}</p>
-		`
-    };
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.status(500).json({ error });
-        } else {
-            res.status(200).json({ message: 'Email envoyé' });
-        }
-    });
+exports.sendEmail = async (req, res) => {
+    try {
+        const emailTemplate = await ejs.renderFile(path.join(__dirname, '../views/index.ejs'), {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            message: req.body.message
+        });
+
+        const mailOptions = {
+            from: process.env.EMAIL,
+            to: process.env.EMAIL,
+            subject: 'Portfolio - message',
+            html: emailTemplate 
+        };
+
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ message: 'Email envoyé' });
+    } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
+        res.status(500).json({ error: 'Erreur lors de l\'envoi de l\'e-mail. Veuillez réessayer plus tard.' });
+    }
 };

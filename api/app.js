@@ -10,4 +10,6 @@ const emailRoutes = require('./routes/email');
 app.use(express.json());
 app.use('/', emailRoutes);
 
+app.set('view engine', 'ejs');
+    
 module.exports = app;

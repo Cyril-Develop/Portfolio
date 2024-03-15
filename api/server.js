@@ -1,11 +1,11 @@
-const https = require('https');
+const http = require('http');
 const app = require('./app');
 const fs = require('fs');
 
-const options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/cyril-develop.fr/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/cyril-develop.fr/fullchain.pem'),
-};
+// const options = {
+//     key: fs.readFileSync('/etc/letsencrypt/live/cyril-develop.fr/privkey.pem'),
+//     cert: fs.readFileSync('/etc/letsencrypt/live/cyril-develop.fr/fullchain.pem'),
+// };
 
 const normalizePort = val => {
     const port = parseInt(val, 10);
@@ -39,7 +39,7 @@ const errorHandler = error => {
     }
 };
 
-const server = https.createServer(options, app);
+const server = http.createServer(app);
 
 server.on('error', errorHandler);
 server.on('listening', () => {
