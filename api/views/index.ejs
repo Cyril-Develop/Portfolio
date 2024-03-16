@@ -7,6 +7,7 @@
     <style>
       html {
         font-size: 62.5%;
+        font-family: Arial, sans-serif;
       }
 
       * {
@@ -64,15 +65,14 @@
             style="max-width: 800px; margin: 0 auto; background-color: #fff"
           >
             <tr>
-              <td align="center" bgcolor="#263b40" style="padding: 20px 0">
-              </td>
+              <td align="center" bgcolor="#263b40" style="padding: 20px 0"></td>
             </tr>
             <tr>
               <td style="padding: 20px">
                 <div class="contact">
                   <h2>▶ Coordonnées</h2>
-                  <p>🙍🏻 <%= firstname %> <%= lastname %></p>
-                  <p>📩 <%= email %></p>
+                  <p>➡️ <%= firstname %> <%= lastname %></p>
+                  <p>✉️ <%= email %></p>
                 </div>
               </td>
             </tr>
@@ -86,9 +86,12 @@
               <td style="padding: 20px">
                 <div class="message">
                   <h2>▶ Message</h2>
-                  <p><%= message %></p>
+                  <pre style="font-family: inherit;"><%= message %></pre>
                 </div>
               </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#263b40" style="padding: 20px 0"></td>
             </tr>
           </table>
         </td>

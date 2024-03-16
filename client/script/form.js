@@ -53,7 +53,7 @@ export const form = () => {
             lastname: userLastname.value,
             firstname: userFirstname.value,
             email: userEmail.value,
-            message: userMessage.value,
+            message: userMessage.value
         };
 
         try {
