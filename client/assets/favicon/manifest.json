@@ -2,22 +2,22 @@
   "name": "Portfolio de Cyril Bourdon",
   "icons": [
     {
-      "src": "/client/assets/favicon/apple-touch-icon.png",
+      "src": "./apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/client/assets/favicon/favicon-32x32.png",
+      "src": "./favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/client/assets/favicon/favicon-16x16.png",
+      "src": "./favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/client/assets/favicon/mstile-150x150.png",
+      "src": "./mstile-150x150.png",
       "sizes": "150x150",
       "type": "image/png"
     }
