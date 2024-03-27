@@ -218,7 +218,7 @@
             top: 50%;
             display: flex;
             flex-wrap: wrap;
-            will-change: opacity;
+            will-change: transform;
             width: 20vw;
             max-width: 500px;
             height: 30vw;
@@ -226,7 +226,7 @@
             background-image: url('../assets/images/hero.jpg');
             background-size: cover;
             background-position: center;
-            transform: translateY(-50%) rotate(-4deg);
+            transform: translateY(-50%);
 
             span{
                 width: 25%;
@@ -245,13 +245,12 @@
                 left: unset;
                 height: 100%;
                 width: 100%;
-                max-width: 25rem;
-                transform: translateY(0) rotate(0deg);
+                max-width: 30rem;
+                transform: translateY(0);
             }
 
             @media screen and (max-width: 500px) {
-                width: 70vw;
-                transform: translateY(0) rotate(0deg);
+                width: 80vw;
             }
         }
     }

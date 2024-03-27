@@ -1,6 +1,8 @@
 export const initHero = () => {
   const tlHero = gsap.timeline();
 
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+
   const blocs = document.querySelectorAll(".bloc_fadeOut");
   const shuffledBlocs = Array.from(blocs).sort(() => Math.random() - 0.6);
   const letterElements = document.querySelectorAll(".letter_fadeIn");
@@ -31,22 +33,27 @@ export const initHero = () => {
       "letters"
     );
 
-  tlHero
-    .to(".line", {
-      visibility: "visible",
-      width: "15rem",
-      duration: 0.2,
-    })
-    .to(".hero_footer_scroll", {
-      autoAlpha: 1,
+  tlHero.to(".line", {
+    visibility: "visible",
+    width: "15rem",
+    duration: 0.2,
+  });
+  if (!isMobile) {
+    tlHero.to(".hero_main_img", {
+      rotate: -4,
       duration: 0.2,
     });
+  }
+  tlHero.to(".hero_footer_scroll", {
+    autoAlpha: 1,
+    duration: 0.2,
+  });
 
   const tlScroll = gsap.timeline({ repeat: -1 });
 
   tlScroll
     .to(".hero_footer_scroll_anim", {
-      duration: 0.2,
+      duration: 0.6,
       y: 10,
       opacity: 1,
       ease: "power2.inOut",
