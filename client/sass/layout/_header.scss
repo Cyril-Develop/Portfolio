@@ -1,317 +1,315 @@
 .hero {
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 100;
 
-    &_header {
-        margin: 0 auto;
-        max-width: 2700px;
-        width: 100%;
-        padding: 0 5rem;
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
+  &_header {
+    margin: 0 auto;
+    max-width: 2700px;
+    width: 100%;
+    padding: 0 5rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100px;
+    // direction justify align
+    @include flex(row, space-between, center);
+    @include body-font(clamp(1.5rem, 1.8vw, 2.1rem));
+    background-color: $primary-color;
+
+    @media screen and (max-width: 800px) {
+      padding: 0 2rem;
+    }
+
+    .fadeIn_bottom {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50px);
+    }
+
+    span:nth-child(1) {
+      text-transform: capitalize;
+    }
+
+    &_infos {
+      // direction justify align gap
+      @include flex(column, null, center, 0.5rem);
+
+      span:nth-child(2)::before {
+        @include font-awesome("\f3c5", null, 900);
+        margin-right: 0.5rem;
+      }
+    }
+
+    button {
+      @include flex(column, null, null);
+      background-color: transparent;
+      @include body-font(clamp(1.6rem, 1.8vw, 2.1rem));
+      overflow: hidden;
+    }
+
+    &_menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateY(-100%);
+      background-color: $dark-color;
+      overflow-y: hidden;
+      padding: 0 5rem;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
+
+      div {
+        position: relative;
         height: 100px;
-        // direction justify align
-        @include flex(row, space-between, center);
-        @include body-font(clamp(1.5rem, 1.8vw, 2.1rem));
-        background-color: $primary-color;
-
-        @media screen and (max-width: 800px) {
-            padding: 0 2rem; 
-        }
-
-        .fadeIn_bottom {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-50px);
-        }
-
-        span:nth-child(1) {
-            text-transform: capitalize;
-        }
-
-        &_infos {
-            // direction justify align gap
-            @include flex(column, null, center, 0.5rem);
-
-            span:nth-child(2)::before {
-                @include font-awesome("\f3c5", null, 900);
-                margin-right: 0.5rem;
-            }
-        }
+        @include body-font(clamp(1.6rem, 1.8vw, 2.1rem));
 
         button {
-            @include flex(column, null, null);
-            background-color: transparent;
-            @include body-font(clamp(1.6rem, 1.8vw, 2.1rem));
-            overflow: hidden;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $primary-color;
+          font-size: 1.7rem;
+          height: 19px;
         }
-
-        &_menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            transform: translateY(-100%);
-            background-color: $dark-color;
-            overflow-y: hidden;
-            padding: 0 5rem; 
-            
-            @media screen and (max-width: 1200px) {
-                padding: 0 2rem; 
-            }
-
-            div {
-                position: relative;
-                height: 100px;
-                @include body-font(clamp(1.6rem, 1.8vw, 2.1rem));
-
-                button {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: $primary-color;
-                    font-size: 1.7rem;
-                    height: 19px;
-                }
-            }
-        }
-
-        .nav {
-            // direction justify align gap
-            @include flex(row, center, center);
-            height: calc(100vh - 150px);
-
-            &_list {
-                @include flex(column, null, center, 5rem);
-
-                &_item {
-                    overflow: hidden;
-                    position: relative;
-
-                    &_link {
-                        display: block;
-                        @include title-font(clamp(4rem, 4vw, 8rem), 900);
-                        color: $primary-color;
-                        letter-spacing: 5px;
-                        padding-top: .5rem;
-                        text-transform: uppercase;
-                        transform: translateY(100%);
-                    }
-                }
-            }
-        }
+      }
     }
 
-    &_main {
-        z-index: -100;
-        position: relative;
-        height: calc(100vh - 200px);
-        max-height: 1160px;
-        // direction justify align gap
-        @include flex(column, center, center, null);
-        margin-top: 100px;
-        padding: 4rem 0 6rem;
-        text-shadow: 1px 1px 1px $primary-color;
+    .nav {
+      // direction justify align gap
+      @include flex(row, center, center);
+      height: calc(100vh - 150px);
 
-        @media screen and (max-width: 700px) {
-            padding: 0;
+      &_list {
+        @include flex(column, null, center, 5rem);
+
+        &_item {
+          overflow: hidden;
+          position: relative;
+
+          &_link {
+            display: block;
+            @include title-font(clamp(4rem, 4vw, 8rem), 900);
+            color: $primary-color;
+            letter-spacing: 5px;
+            padding-top: 0.5rem;
+            text-transform: uppercase;
+            transform: translateY(100%);
+          }
         }
+      }
+    }
+  }
 
-        &_title {
-            width: 100%;
-            z-index: -100;
-            // direction justify align gap
-            @include flex(column, null, center, null);
-            white-space: nowrap;
-            color: $secondary-color;
-            line-height: 1.5;
-            letter-spacing: 2px;
-            @include title-font(clamp(3.8rem, 6vw, 15rem), 900);
+  &_main {
+    z-index: -100;
+    position: relative;
+    height: calc(100vh - 200px);
+    max-height: 1160px;
+    // direction justify align gap
+    @include flex(column, center, center, null);
+    margin-top: 100px;
+    padding: 4rem 0 6rem;
+    text-shadow: 1px 1px 1px $primary-color;
 
-            @media screen and (max-width: 1350px) {
-                padding: 0 2rem;
-            }
-
-            @media screen and (max-width: 500px) {
-                letter-spacing: 1px;
-                letter-spacing: unset;
-            }
-
-            .letter_fadeIn {
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            div {
-                margin-left: 2vw;
-                
-                @media screen and (max-width: 500px) {
-                    width: 100%;
-                    margin-left: unset;
-                }
-                
-                div:nth-child(1) {
-                    @media screen and (max-width: 500px) {
-                        text-align: left;
-                    }
-                }
-
-                div:nth-child(2) {
-                    margin-left: 40vw;
-
-                    @media screen and (max-width: 500px) {
-                        margin-left: unset;
-                        text-align: right;
-                    }
-                }
-            }
-
-            div:nth-child(2) {
-                margin-left: 20vw;
-
-                @media screen and (max-width: 500px) {
-                    margin-left: unset;
-                    text-align: left;
-                }
-            }
-
-            div:nth-child(3) {
-                position: relative;
-                margin-left: 55vw;
-
-                @media screen and (max-width: 500px) {
-                    margin-left: unset;
-                    text-align: center;
-                }
-            }
-
-            .line {
-                position: absolute;
-                bottom: -5rem;
-                right: -50px;
-                transform-origin: bottom right;
-                transform: translateY(-50%) rotate(-6deg);
-                width: 0;
-                height: 5px;
-                visibility: hidden;
-                background-color: $dark-color;
-
-                @media screen and (max-width: 1350px) {
-                   right: 30px;
-                   bottom: -2rem;
-                }      
-
-                @media screen and (max-width: 700px) {
-                    display: none;
-                }        
-            }
-        }
-
-        &_img {
-            z-index: -200;
-            position: absolute;
-            left: 20%;
-            top: 50%;
-            display: flex;
-            flex-wrap: wrap;
-            will-change: transform;
-            width: 20vw;
-            max-width: 500px;
-            height: 30vw;
-            max-height: 700px;
-            max-height: 500px;
-            filter: grayscale(100%);
-            background-image: url('../assets/images/hero.png');
-            background-size: cover;
-            background-position: left;
-            transform: translateY(-40%);
-
-            span{
-                width: 25%;
-                height: 25%;
-                background-color: $primary-color;
-            }
-
-            @media screen and (max-width: 1200px) {
-                height: 35vw;
-                width: 25vw;
-            }
-
-            @media screen and (max-width: 700px) {
-                position: relative;
-                top: unset;
-                left: unset;
-                height: 80vw;
-                width: 50vw;
-                transform: translateY(0);
-            }
-
-            @media screen and (max-width: 500px) {
-                height: 80vw;
-                width: 60vw;
-            }
-        }
+    @media screen and (max-width: 700px) {
+      padding: 0;
     }
 
-    &_footer {
-        position: relative;
-        z-index: -100;
-        height: 100px;
-        padding: 0 5rem 1rem;
-        // direction justify align gap
-        @include flex(row, null, flex-end, 5rem);
-        font-size: clamp(3.5rem, 4vw, 5rem);
-        transform: translateY(50px);
+    &_title {
+      width: 100%;
+      z-index: -100;
+      // direction justify align gap
+      @include flex(column, null, center, null);
+      white-space: nowrap;
+      color: $secondary-color;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      @include title-font(clamp(3.8rem, 6vw, 15rem), 900);
+
+      @media screen and (max-width: 1350px) {
+        padding: 0 2rem;
+      }
+
+      @media screen and (max-width: 500px) {
+        letter-spacing: 1px;
+        letter-spacing: unset;
+      }
+
+      .letter_fadeIn {
         opacity: 0;
         visibility: hidden;
+      }
 
-        @media screen and (max-width: 800px) {
-            padding: 0 2rem 2rem; 
-        }
-        
+      div {
+        margin-left: 2vw;
+
         @media screen and (max-width: 500px) {
-            justify-content: space-between;
-            gap: 0;
+          width: 100%;
+          margin-left: unset;
         }
 
-        &_scroll {
-            border: 2px solid $dark-color;
-            border-radius: 22px;
-            height: 40px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            opacity: 0;
-            visibility: hidden;
-
-            @media screen and (max-width: 800px) {
-                display: none;
-            }
-
-            &_anim {
-                background: $dark-color;
-                border-radius: 30px;
-                height: 8px;
-                position: absolute;
-                left: calc(50% - 1.5px);
-                right: 50%;
-                top: 8px;
-                width: 3px;
-            }
+        div:nth-child(1) {
+          @media screen and (max-width: 500px) {
+            text-align: left;
+          }
         }
 
-        a {
-            display: inline-block;
-            color: $dark-color;
+        div:nth-child(2) {
+          margin-left: 40vw;
 
-            &:hover {
-                color: $secondary-color;
-            }
+          @media screen and (max-width: 500px) {
+            margin-left: unset;
+            text-align: right;
+          }
         }
+      }
+
+      div:nth-child(2) {
+        margin-left: 20vw;
+
+        @media screen and (max-width: 500px) {
+          margin-left: unset;
+          text-align: left;
+        }
+      }
+
+      div:nth-child(3) {
+        position: relative;
+        margin-left: 55vw;
+
+        @media screen and (max-width: 500px) {
+          margin-left: unset;
+          text-align: center;
+        }
+      }
+
+      .line {
+        position: absolute;
+        bottom: -5rem;
+        right: -50px;
+        transform-origin: bottom right;
+        transform: translateY(-50%) rotate(-6deg);
+        width: 0;
+        height: 5px;
+        visibility: hidden;
+        background-color: $dark-color;
+
+        @media screen and (max-width: 1350px) {
+          right: 30px;
+          bottom: -2rem;
+        }
+
+        @media screen and (max-width: 700px) {
+          display: none;
+        }
+      }
     }
+
+    &_img {
+      z-index: -200;
+      position: absolute;
+      left: 15%;
+      top: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      will-change: transform;
+      height: 30vw;
+      width: 25vw;
+      max-height: 650px;
+      filter: grayscale(100%);
+      background-image: url("../assets/images/hero.png");
+      background-size: cover;
+      background-position: top;
+      transform: translateY(-38%);
+
+      span {
+        width: 25%;
+        height: 25%;
+        background-color: $primary-color;
+      }
+
+      @media screen and (max-width: 1200px) {
+        height: 30vw;
+        width: 25vw;
+      }
+
+      @media screen and (max-width: 700px) {
+        position: relative;
+        top: unset;
+        left: unset;
+        height: 70vw;
+        width: 60vw;
+        transform: translateY(0);
+      }
+
+      @media screen and (max-width: 500px) {
+        height: 80vw;
+        width: 60vw;
+      }
+    }
+  }
+
+  &_footer {
+    position: relative;
+    z-index: -100;
+    height: 100px;
+    padding: 0 5rem 1rem;
+    // direction justify align gap
+    @include flex(row, null, flex-end, 5rem);
+    font-size: clamp(3.5rem, 4vw, 5rem);
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+
+    @media screen and (max-width: 800px) {
+      padding: 0 2rem 2rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    &_scroll {
+      border: 2px solid $dark-color;
+      border-radius: 22px;
+      height: 40px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      opacity: 0;
+      visibility: hidden;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+
+      &_anim {
+        background: $dark-color;
+        border-radius: 30px;
+        height: 8px;
+        position: absolute;
+        left: calc(50% - 1.5px);
+        right: 50%;
+        top: 8px;
+        width: 3px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: $dark-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
 }
