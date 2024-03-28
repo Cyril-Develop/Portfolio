@@ -214,7 +214,7 @@
         &_img {
             z-index: -200;
             position: absolute;
-            left: 17%;
+            left: 20%;
             top: 50%;
             display: flex;
             flex-wrap: wrap;
@@ -223,10 +223,12 @@
             max-width: 500px;
             height: 30vw;
             max-height: 700px;
-            background-image: url('../assets/images/hero.jpg');
+            max-height: 500px;
+            filter: grayscale(100%);
+            background-image: url('../assets/images/hero.png');
             background-size: cover;
-            background-position: center;
-            transform: translateY(-50%);
+            background-position: left;
+            transform: translateY(-40%);
 
             span{
                 width: 25%;
