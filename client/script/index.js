@@ -22,7 +22,7 @@ requestAnimationFrame(raf);
 /**********************************/
 /// ----- Init hero section ---- //
 /********************************/
-window.addEventListener("load", initHero);
+initHero();
 
 /**********************************/
 /// -------- Animations -------- //

@@ -2,12 +2,6 @@
     position: relative;
     z-index: 100;
 
-    @media screen and (max-width: 700px) {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
     &_header {
         margin: 0 auto;
         max-width: 2700px;
