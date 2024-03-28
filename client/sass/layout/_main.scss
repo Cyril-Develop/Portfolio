@@ -139,9 +139,14 @@
     padding: 5rem 0;
     color: $primary-color;
     background-color: transparent;
+    letter-spacing: 1.2rem;
 
     @media screen and (max-width: 800px) {
       padding: 3rem 0;
+    }
+
+    @media screen and (max-width: 800px) {
+      letter-spacing: 0.5rem;
     }
 
     .title-bg {
