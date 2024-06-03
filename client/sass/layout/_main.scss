@@ -20,7 +20,7 @@
   &_about {
     // direction justify align gap
     @include flex(column, center, null, 5rem);
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
     padding: 0 5rem;
     background-image: repeating-linear-gradient(90deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(225,225,225),rgb(225,225,225));
 
@@ -167,7 +167,7 @@
   &_slider {
     display: flex;
     width: 600%;
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
 
     @media screen and (max-width: 1300px) {
       flex-direction: column;
@@ -368,7 +368,7 @@
   }
 
   &_banner {
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
     max-width: 2700px;
     background-image: url("../assets/images/banner.webp");
     background-size: cover;
@@ -376,17 +376,17 @@
     background-attachment: fixed;
 
     @media screen and (max-width: 1300px) {
-      height: 70vh;
+      height: 70dvh;
     }
 
     @media screen and (max-width: 800px) {
-      height: 50vh;
+      height: 50dvh;
     }
   }
 
   &_contact {
     @include flex(row, center, center, null);
-    height: calc(100vh - 200px);
+    height: calc(100dvh - 200px);
 
     @media screen and (max-width: 1000px) {
       height: auto;
