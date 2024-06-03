@@ -22,6 +22,7 @@
     @include flex(column, center, null, 5rem);
     height: calc(100vh - 100px);
     padding: 0 5rem;
+    background-image: repeating-linear-gradient(90deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(201,201,201, 0.22) 0px, rgba(201,201,201, 0.22) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(225,225,225),rgb(225,225,225));
 
     @media screen and (max-width: 1300px) {
       height: auto;
@@ -180,6 +181,10 @@
       padding: 5rem 2rem;
     }
 
+    @media screen and (max-width: 500px) {
+      gap: 5rem;
+    }
+
     &_project {
       // direction justify align gap
       @include flex(row, center, center, 5rem);
@@ -296,7 +301,11 @@
         .link_mobile {
           display: none;
           align-self: flex-end;
-          color: $secondary-color;
+          color: $primary-color;
+          padding: 10px;
+          letter-spacing: 2px;
+          border-radius: 5px;
+          background-color: $secondary-color;
           @include body-font(clamp(1.6rem, 2vw, 2.3rem));
 
           @media screen and (max-width: 1300px) {
@@ -492,6 +501,7 @@
           letter-spacing: 0.5rem;
           background-color: $secondary-color;
           color: $primary-color;
+          border-radius: 5px;
 
           @media screen and (max-width: 1000px) {
             width: 50%;
@@ -553,6 +563,8 @@
       textarea {
         font-size: clamp(1.6rem, 1.6vw, 2.3rem);
         font-family: "Comic Neue", cursive;
+        border: 1px solid #000;
+        border-radius: 5px;
 
         &.invalid {
           border: 1px solid red;
